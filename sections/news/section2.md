@@ -4,6 +4,8 @@ heading: ""
 tags:
   - news
 ---
+**T﻿est link: [Example](https://example.com)**
+
 **T﻿he Indian Express: [Report](https://indianexpress.com/article/cities/bangalore/ai-fake-news-neuroscientist-mauktik-kulkarni-9122990/) summarizing Mauktik's public lecture on 'AI's Initial Impact on Artists, Journalists, and Democratic Institutions' at the Bangalore International Centre.**
 
 **Scroll: *[Article](https://scroll.in/article/1050595/the-misinformation-armageddon-how-artificial-intelligence-could-undermine-democracies)* by Mauktik on the dangers AI poses to democracies and how it will require free societies to come up with new ways of thinking about their social contracts with their citizenry.**
