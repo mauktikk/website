@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+section: page
+---
+
+{% set sectionlist = collections[sectiontag] %}
+
+<section class="wrapper">
+    <header class="align-center">
+      <h1>{{ title }}</h1>
+    </header>
+
+    {% include "components/sectionlist.njk" %}
+</section>

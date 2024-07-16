@@ -1,0 +1,238 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+# Uncomment below to enable drafts
+# publish_mode: editorial_workflow
+
+media_folder: "static/img" # Media files will be stored in the repo under images/uploads
+
+collections:
+  # Home page
+  - name: "home" # Used in routes, e.g., /admin/collections/blog
+    label: "Home" # Used in the UI
+    label_singular: "Section"
+    folder: "sections/home" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Heading",
+          name: "heading",
+          widget: "string",
+          default: "section",
+          required: false,
+        }
+      - { label: "Image", name: "imgurl", widget: "image", required: false }
+      - {
+          label: "Image Hyperlink",
+          name: "imghref",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Imgshape",
+          name: "imgshape",
+          widget: "select",
+          options: ["square", "round"],
+          required: false,
+        }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "list",
+          default: ["homesection"],
+        }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+  # Writing page
+  - name: "writing" # Used in routes, e.g., /admin/collections/blog
+    label: "Writing" # Used in the UI
+    label_singular: "Section"
+    folder: "sections/writing" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Heading",
+          name: "heading",
+          widget: "string",
+          default: "section",
+          required: false,
+        }
+      - { label: "Image", name: "imgurl", widget: "image", required: false }
+      - {
+          label: "Image Hyperlink",
+          name: "imghref",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Imgshape",
+          name: "imgshape",
+          widget: "select",
+          options: ["square", "round"],
+          required: false,
+        }
+      - { label: "Tags", name: "tags", widget: "list", default: ["writing"] }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+  # Film-making page
+  - name: "filmmaking" # Used in routes, e.g., /admin/collections/blog
+    label: "FilmMaking" # Used in the UI
+    label_singular: "Section"
+    folder: "sections/filmmaking" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Heading",
+          name: "heading",
+          widget: "string",
+          default: "section",
+          required: false,
+        }
+      - { label: "Image", name: "imgurl", widget: "image", required: false }
+      - {
+          label: "Image Hyperlink",
+          name: "imghref",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Imgshape",
+          name: "imgshape",
+          widget: "select",
+          options: ["square", "round"],
+          required: false,
+        }
+      - { label: "Tags", name: "tags", widget: "list", default: ["filmmaking"] }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+  # Speaking page
+  - name: "speaking" # Used in routes, e.g., /admin/collections/blog
+    label: "Speaking" # Used in the UI
+    label_singular: "Section"
+    folder: "sections/speaking" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Heading",
+          name: "heading",
+          widget: "string",
+          default: "section",
+          required: false,
+        }
+      - {
+          label: "Gallery",
+          name: "gallery",
+          widget: "list",
+          allow_add: true,
+          field: { label: Image, name: image, widget: image },
+        }
+      - { label: "Image", name: "imgurl", widget: "image", required: false }
+      - {
+          label: "Image Hyperlink",
+          name: "imghref",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Imgshape",
+          name: "imgshape",
+          widget: "select",
+          options: ["square", "round"],
+          required: false,
+        }
+      - { label: "Tags", name: "tags", widget: "list", default: ["speaking"] }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+  # Consulting page
+  - name: "consulting" # Used in routes, e.g., /admin/collections/blog
+    label: "Consulting" # Used in the UI
+    label_singular: "Section"
+    folder: "sections/consulting" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Heading",
+          name: "heading",
+          widget: "string",
+          default: "section",
+          required: false,
+        }
+      - { label: "Image", name: "imgurl", widget: "image", required: false }
+      - {
+          label: "Image Hyperlink",
+          name: "imghref",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Imgshape",
+          name: "imgshape",
+          widget: "select",
+          options: ["square", "round"],
+          required: false,
+        }
+      - { label: "Tags", name: "tags", widget: "list", default: ["consulting"] }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+  # Gallery page
+  - name: "gallery" # Used in routes, e.g., /admin/collections/blog
+    label: "Gallery" # Used in the UI
+    label_singular: "Section"
+    folder: "sections/gallery" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Heading",
+          name: "heading",
+          widget: "string",
+          default: "section",
+          required: false,
+        }
+      - {
+          label: "Gallery",
+          name: "gallery",
+          widget: "list",
+          allow_add: true,
+          field: { label: Image, name: image, widget: image },
+        }
+      - { label: "Tags", name: "tags", widget: "list", default: ["gallery"] }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+  - name: "news" # Used in routes, e.g., /admin/collections/blog
+    label: "News" # Used in the UI
+    label_singular: "section"
+    folder: "sections/news" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Heading",
+          name: "heading",
+          widget: "string",
+          default: "section",
+          required: false,
+        }
+      - { label: "Image", name: "imgurl", widget: "image", required: false }
+      - {
+          label: "Image Hyperlink",
+          name: "imghref",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Imgshape",
+          name: "imgshape",
+          widget: "select",
+          options: ["square", "round"],
+          required: false,
+        }
+      - { label: "Tags", name: "tags", widget: "list", default: ["news"] }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
